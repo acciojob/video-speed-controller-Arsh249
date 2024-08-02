@@ -1,2 +1,71 @@
 
 /* Your CSS Code here. */
+/* Basic styling */
+body {
+  font-family: sans-serif;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.player {
+  max-width: 750px;
+  border: 5px solid rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  position: relative;
+  font-size: 0;
+}
+
+.player__video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.player__controls {
+  display: flex;
+  flex-wrap: wrap;
+  background: rgba(0,0,0,0.1);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.player:hover .player__controls {
+  opacity: 1;
+}
+
+.player__button, .player__slider {
+  background: none;
+  border: 0;
+  color: white;
+  font-size: 16px;
+  padding: 5px 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.player__slider {
+  width: 100px;
+}
+
+.progress {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: rgba(0,0,0,0.5);
+  height: 5px;
+  width: 100%;
+}
+
+.progress__filled {
+  width: 50%;
+  background: #ff0000;
+  flex-basis: 0%;
+}
